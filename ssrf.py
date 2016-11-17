@@ -32,3 +32,4 @@ if __name__ == "__main__":
   args = "".join(commandargs)
   ip_prefix = '.'.join(args.split('.')[:-1])
   find_ip(ip_prefix)
+  
